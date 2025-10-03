@@ -50,8 +50,7 @@ impl Config {
     ///
     ///
     pub fn load() -> Self {
-        confy::load("rust-competitive-helper")
-            .expect("Can't load config for rust-competitive-helper")
+        confy::load_path("rch-config").expect("Can't load config for rust-competitive-helper")
     }
 
     pub fn run_open_task_command(
